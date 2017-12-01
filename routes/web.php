@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PostController@index');
+Route::get('/about', 'PageController@about');
+
+Route::resource('posts', 'PostController');
