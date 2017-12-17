@@ -15,3 +15,12 @@ Route::get('/', 'PostController@index');
 Route::get('/about', 'PageController@about');
 
 Route::resource('posts', 'PostController');
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
+Route::get('/profile', 'DashboardController@profile');
+Route::get('/profile/edit', 'DashboardController@edit');
+Route::put('/profile/edit', 'DashboardController@update');
+Route::get('/profile/passwordreset', 'DashboardController@editPassword');
+Route::put('/profile/passwordreset', 'DashboardController@updatePassword');
